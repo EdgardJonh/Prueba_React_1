@@ -25,10 +25,14 @@ const MiApi = () => {
   useEffect(() => {
     obtenerInfo();
   }, []);
+  const character = {
+	
+  }
   return (
     <>
       <div className="container">
-        <h1 style={{textAlign:'center'}}>Personajes de Harry Potter</h1>
+        
+        
         
         <Grilla persona={personajes}></Grilla>
       </div>

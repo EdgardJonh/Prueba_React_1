@@ -1,5 +1,6 @@
 import  { useState } from "react";
 import MyCards from "./MyCards";
+import Buscador from "./Buscador";
 const Grilla = ({ persona }) => {
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -12,14 +13,7 @@ const Grilla = ({ persona }) => {
   );
   return (
     <div>
-      <input 
-      style={{width: '20rem'}}
-      className="form-control m-4"
-        type="text"
-        placeholder="Buscar personajes"
-        value={searchTerm}
-        onChange={handleSearch}
-      />
+     <Buscador handleSearch={handleSearch} searchTerm={searchTerm} ></Buscador>
       <div className="row">
         {filteredData &&
           filteredData.map((estasPersonas) => (
